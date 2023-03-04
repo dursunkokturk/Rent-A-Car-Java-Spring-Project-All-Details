@@ -2,9 +2,9 @@ package kodlama.io.Rent_A_Car.dataAccess.abstracts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import kodlama.io.Rent_A_Car.entities.concretes.Brand;
+import kodlama.io.Rent_A_Car.entities.concretes.Model;
 
-// Marka Listeleme Islemini Yapmak Icin Interface Kullaniyoruz
+// Model Listeleme Islemini Yapmak Icin Interface Kullaniyoruz
 
 // JpaRepository Kullanilarak Ekleme Silme Guncelleme Islemleri Icin 
 // Kullanilacak Fonksiyonlar Otomatik Olarak Geliyor
@@ -22,21 +22,6 @@ import kodlama.io.Rent_A_Car.entities.concretes.Brand;
 // id Bilgisini Class in Primary Key Degeri Olarak Kabul Ediyor
 
 // Kabul Edilen Deger Tam Sayidir
-public interface BrandRepository extends JpaRepository<Brand, Integer>{
-	
-	// Markanin Database Icinde Var Olma Durumunu Kontrol Etmek Icin 
-	// Yeni Bir Method Olusturuyoruz
-	// Yeni Method Icin JpaRepository Icinde Bulunan 
-	// Ozel Keyword lerden Yararlaniyoruz
-	boolean existsByName(String name);
-	
-	/*
-	Find Ile Baslayan Bir Kyeword Kullanarak
-	Tek Bir Yerde Kontrol Yapilacak Ise
-	Brand findByName(String name);
-	
-	Find Ile Baslayan Bir Kyeword Kullanarak
-	Bir Liste Icinde Kontrol Yapilacak Ise
-	List<Brand> findByName(String name);
-	*/
+public interface ModelRepository extends JpaRepository<Model,Integer>{
+
 }
